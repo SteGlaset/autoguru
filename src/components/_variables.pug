@@ -1,0 +1,456 @@
+//-Текущий год
+- year = new Date().getFullYear()
+
+//-Основная информация
+- title = `Автошкола "АвтоГуру" ${year} год`
+- phone = { formatted: "+7 (495) 128-86-72", notFormatted: "+74951288672" }
+- mail = "avtomotospb@yandex.ru"
+- workTime = "пн-вс с 10:00 до 20:00"
+- vk = "https://vk.com"
+
+//-Навигационные ссылки
+-   prefixUrl = ""
+-
+    navLinks = [
+        {
+            name: "Главная",
+            href: `${prefixUrl}#automoto`
+        },
+        {
+            name: "Цены",
+            href: `${prefixUrl}#categories`
+        },
+        {
+            name: "Филиалы",
+            href: `${prefixUrl}#branches`
+        },
+        {
+            name: "Как проходит обучение",
+            href: `${prefixUrl}#auto-stages`
+        },
+        {
+            name: "Отзывы",
+            href: `${prefixUrl}#reviews`
+        },
+        {
+            name: "Акции",
+            href: `${prefixUrl}#events`
+        }
+    ]
+
+//-Категории и их характеристики
+-
+    categories = [
+        {
+            title: "Категория В",
+            advantages:
+                    [
+                        "Дистанционный теоретический курс обучения на права",
+                        "Полный практический курс занятий на автомобиле с МКПП (20 часов)",
+                        "Полный комплект документов",
+                        "Организованная сдача экзамена в ГИБДД и получение прав категории Б"
+                    ],
+            price: '21 900 рублей'
+        },
+        {
+            title: "Категория А",
+            advantages:
+                    [
+                        "Дистанционный теоретический курс обучения на права",
+                        "Полный практический курс занятий на автомобиле с МКПП (20 часов)",
+                        "Полный комплект документов",
+                        "Организованная сдача экзамена в ГИБДД и получение прав категории Б"
+                    ],
+            price: '15 000 рублей'
+        },
+    ]
+
+//-Филиалы
+-
+    branches = [
+        {
+            name: "Проспект Большевиков",
+            href: "prospect-bolshevikov.html",
+            address: "Пр.Большевиков - ул. Коллонтай, 5/1",
+            title: "Автошкола на Проспекте Большевиков",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2000.1409379260845!2d30.447837516386546!3d59.913208281866936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962e3dcd3a41e9%3A0x3900c5ff1a1472e1!2z0YPQuy4g0JrQvtC70LvQvtC90YLQsNC5LCA1LzEsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTMzMTM!5e0!3m2!1sru!2sru!4v1676623803409!5m2!1sru!2sru"
+
+        },
+        {
+            name: "Купчино",
+            href: "kupchino.html",
+            address: "Балканская площадь, 5 лит Ю",
+            title: "Автошкола в Купчино",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2005.4268779431834!2d30.376920332032793!3d59.825440620094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696250c1f3a936d%3A0x5cc59277d8241a2!2z0JHQsNC70LrQsNC90YHQutCw0Y8g0YPQuy4sIDXQu9C40YIuINCuLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkyMjgx!5e0!3m2!1sru!2sru!4v1676623931124!5m2!1sru!2sru"
+        },
+        {
+            name: "Автово",
+            href: "avtovo.html",
+            address: "Проспект Стачек, 99",
+            title: "Автошкола у м.Автово",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1000.450515831419!2d30.275031800643443!3d59.900592498396854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696308ef9955555%3A0xe74f37271897d91!2z0L_RgC4g0KHRgtCw0YfQtdC6LCA5OSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5ODMwMg!5e0!3m2!1sru!2sru!4v1676623689555!5m2!1sru!2sru"
+        },
+        {
+            name: "Комендантский Проспект",
+            href: "komendantskiy.html",
+            address: "Комендантская площадь, 1 лит А",
+            title: "Автошкола у м.Комендантский Проспект",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.4489972175968!2d30.257545251766057!3d60.00763016340433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469634309dfd9c89%3A0x8616781adca102e5!2z0JDRgtC80L7RgdGE0LXRgNCw!5e0!3m2!1sru!2sru!4v1676624154014!5m2!1sru!2sru"
+        },
+        {
+            name: "Девяткино",
+            href: "devyatkino.html",
+            address: "Проспект Авиаторов Балтики, 7",
+            title: "Автошкола у м.Девяткино",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497.9385084180391!2d30.437973788161646!3d60.052304768356144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4697ccb415639d8b%3A0xbced0590e17c974c!2z0L_RgC3Rgi4g0JDQstC40LDRgtC-0YDQvtCyINCR0LDQu9GC0LjQutC4LCA3LCDQnNGD0YDQuNC90L4sINCb0LXQvdC40L3Qs9GA0LDQtNGB0LrQsNGPINC-0LHQuy4sIDE4ODY2Mg!5e0!3m2!1sru!2sru!4v1676624580744!5m2!1sru!2sru"
+        },
+        {
+            name: "Приморская",
+            href: "primorskaya-jeleznovodskaya.html",
+            address: "Железноводская, 68 к1",
+            title: "Автошкола у м.Приморская",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d998.9139906274856!2d30.246098356916622!3d59.951588075108624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469636d17968d475%3A0xed57e867a304c2e8!2z0JbQtdC70LXQt9C90L7QstC-0LTRgdC60LDRjyDRg9C7LiwgNjgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTkxNTU!5e0!3m2!1sru!2sru!4v1676624669485!5m2!1sru!2sru"
+        },
+        {
+            name: "Приморская",
+            href: "primorskaya-odoevskogo.html",
+            address: "Одоевского, 29",
+            title: "Автошкола у м.Приморская",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1997.9967461882593!2d30.23543690443457!3d59.948788195870264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469636d70907704b%3A0xf7b7bcb6c170b5c!2z0YPQuy4g0J7QtNC-0LXQstGB0LrQvtCz0L4sIDI5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0JvQtdC90LjQvdCz0YDQsNC00YHQutCw0Y8g0L7QsdC7LiwgMTk5MTU1!5e0!3m2!1sru!2sru!4v1676624704869!5m2!1sru!2sru"
+        },
+        {
+            name: "Технологический институт",
+            href: "technologicheskiy-institut.html",
+            address: "Марата, 86 лит А",
+            title: "Автошкола у м.Технологический институт",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1999.7959545402384!2d30.336310151763325!3d59.918933670561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963052d4a9be47%3A0x700de0db962c9467!2z0YPQuy4g0JzQsNGA0LDRgtCwLCA4Niwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MTExOQ!5e0!3m2!1sru!2sru!4v1676624736376!5m2!1sru!2sru"
+        },
+        {
+            name: "Петроградская",
+            href: "petrogradskaya.html",
+            address: "Каменноостровский проспект, 42",
+            title: "Автошкола у м.Петроградская",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8694760984263!2d30.307017551764844!3d59.967488566644036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696315a8575a43f%3A0xccd975ed40c1598c!2z0JrQsNC80LXQvdC90L7QvtGB0YLRgNC-0LLRgdC60LjQuSDQv9GALiwgNDIsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcxMDE!5e0!3m2!1sru!2sru!4v1676624769959!5m2!1sru!2sru"
+        },
+        {
+            name: "Крестовский остров",
+            href: "krestovskiy-ostrov.html",
+            address: "Чкаловский проспект, 7",
+            title: "Автошкола у м.Крестовский остров",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1997.3464905797434!2d30.287113051764546!3d59.9595757672825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963149b0213a2d%3A0xce4d5e55c862e7c3!2z0KfQutCw0LvQvtCy0YHQutC40Lkg0L_RgC4sIDcsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTcxMTA!5e0!3m2!1sru!2sru!4v1676624813351!5m2!1sru!2sru"
+        },
+        {
+            name: "Ломоносовская",
+            href: "lomonosovskaya.html",
+            address: "Бабушкина, 40",
+            title: "Автошкола у м.Ломоносовская",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1156.66564110225!2d30.441385965703716!3d59.87782114100373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962fa5342ba523%3A0xb14b840332ffdf2a!2z0YPQuy4g0JHQsNCx0YPRiNC60LjQvdCwLCA0MCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MjE3MQ!5e0!3m2!1sru!2sru!4v1676624854132!5m2!1sru!2sru"
+        },
+        {
+            name: "Метро Рыбацкое",
+            href: "rybackoe.html",
+            address: "Караваевская, 24 к1",
+            title: "Автошкола у м.Рыбацкое",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.9668451116452!2d30.506849499999994!3d59.833082100000006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962f533df233eb%3A0xbd5941216cea712e!2z0JrQsNGA0LDQstCw0LXQstGB0LrQsNGPINGD0LsuLCAyNNC6MSwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5MjE3Nw!5e0!3m2!1sru!2sru!4v1676624879047!5m2!1sru!2sru"
+        },
+        {
+            name: "Ленинский проспект",
+            href: "leninskiy-prospect.html",
+            address: "Ленинский проспект, 129 к6",
+            title: "Автошкола у м.Ленинский проспект",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.866473164107!2d30.268986851761206!3d59.85135767600937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963ae90d7203e7%3A0x21017dab3bf7a132!2z0JvQtdC90LjQvdGB0LrQuNC5INC_0YAt0YIuLCAxMjnQujYsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTgyMTY!5e0!3m2!1sru!2sru!4v1676624910391!5m2!1sru!2sru"
+        },
+        {
+            name: "Кудрово",
+            href: "kudrovo.html",
+            address: "Европейский проспект, 2 ст1",
+            title: "Автошкола у м.Кудрово",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d486.01591452754036!2d30.512629917037444!3d59.89846877872794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46962ef3113c499b%3A0xd51e5a66560113bc!2z0JXQstGA0L7Qv9C10LnRgdC60LjQuSDQv9GA0L7RgdC_LiwgMiwg0JrRg9C00YDQvtCy0L4sINCb0LXQvdC40L3Qs9GA0LDQtNGB0LrQsNGPINC-0LHQuy4sIDE5MzIzMg!5e0!3m2!1sru!2sru!4v1676624955318!5m2!1sru!2sru"
+        },
+        {
+            name: "Проспект Ветеранов",
+            href: "prospect-veteranov.html",
+            address: "Ленинский проспект, 128 к2",
+            title: "Автошкола у м.Проспект Ветеранов",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2003.7470163598625!2d30.266138251761273!3d59.85334147584943!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963aeeac6adf95%3A0x59acb802c939f0e1!2z0KLQoNCaINCd0LDRgNCy0LAsINCb0LXQvdC40L3RgdC60LjQuSDQv9GALdGCLiwgMTI4LCDQui4yLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk4MjE2!5e0!3m2!1sru!2sru!4v1676624998902!5m2!1sru!2sru"
+        },
+        {
+            name: "Комендантский Проспект",
+            href: "komendantskiy-aviakonstructorov.html",
+            address: "Проспект Авиаконструкторов, 5 к2",
+            title: "Автошкола у м.Комендантский Проспект",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.2557887276455!2d30.24468995176619!3d60.010833663145775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46963433bc3aab79%3A0x4c4c53d92dca33a0!2z0L_RgC4g0JDQstC40LDQutC-0L3RgdGC0YDRg9C60YLQvtGA0L7QsiwgNSwg0LogMiwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5NzM3Mg!5e0!3m2!1sru!2sru!4v1676625028966!5m2!1sru!2sru"
+        },
+    ].sort((a, b) => a.name.localeCompare(b.name))
+
+//-Карточки "Почему выбирают нас"
+-
+    whyWeCards = [
+        {
+            imageSrc: "./assets/images/coins.webp",
+            imageAlt: "Монеты",
+            title: "Оплата обучения в рассрочку",
+            description: "Учитесь уже сейчас, а платите потом. Первоначальный взнос на обучение в автошколе от 10 000 руб."
+        },
+        {
+            imageSrc: "./assets/images/foreign.webp",
+            imageAlt: "Иностранцы",
+            title: "Обучаем иностранных граждан",
+            description: "В нашей автошколе пройти обучение на категорию А или Б могут иностранные граждане, имеющие регистрацию на территории РФ."
+        },
+        {
+            imageSrc: "./assets/images/money-bag.webp",
+            imageAlt: "Мешок с деньгами",
+            title: "Обучение по честным ценам",
+            description: "Вы сразу точно знаете, сколько стоит обучение в автошколе — цена уже включает учебные материалы, бензин и страховку. Никаких дополнительных платежей и сборов."
+        },
+        {
+            imageSrc: "./assets/images/car.webp",
+            imageAlt: "Автомобиль",
+            title: "Сопровождение в ГИБДД",
+            description: "Организованная сдача теоретического и практического экзамена в ГИБДД в сопровождении представителя автошколы."
+        }
+    ]
+
+//-Этапы обучения на АВТО
+-
+    autoStages = [
+        {
+            index: "01",
+            title: "Первый этап",
+            description: "Подаете заявку и выбираете комфортный график для обучения на водительские права"
+        },
+        {
+            index: "02",
+            title: "Второй этап",
+            description: "Подписываем договор, вы выбираете комфортный план оплаты, вносите первоначальный взнос"
+        },
+        {
+            index: "03",
+            title: "Третий этап",
+            description: "Начинается обучение теории, которое проходит в нашей автошколе онлайн или в классе"
+        },
+        {
+            index: "04",
+            title: "Четвертый этап",
+            description: "Параллельно начинается практика на ближайшем к вам автодроме"
+        },
+        {
+            index: "05",
+            title: "Пятый этап",
+            description: "Сдаете внутренние экзамены в автошколе (теория, практика)"
+        },
+        {
+            index: "06",
+            title: "Шестой этап",
+            description: "Сдаете экзамен в ГИБДД и официально становитесь водителем"
+        }
+    ]
+
+//-Этапы обучения на МОТО
+-
+    motoStages = [
+        {
+            index: "01",
+            title: "Запись",
+            description: "Подаете заявку на обучение, подписываете договор, согласовываем план оплаты."
+        },
+        {
+            index: "02",
+            title: "Уроки",
+            description: "Проходите курс теоретического (дистанционно) и практического (автодром) обучения в нашей автошколе на категорию А."
+        },
+        {
+            index: "03",
+            title: "Права",
+            description: "Сдаете внутренний экзамен и экзамен в ГИБДД и получаете права категории А."
+        }
+    ]
+
+//-Инструкторы
+-
+    instructors = [
+        {
+            name: "Ирина Васильевна",
+            age: "33 года",
+            imageSrc: "assets/images/instructors/instructor-1.webp",
+        },
+        {
+            name: "Дарья Александровна",
+            age: "32 года",
+            imageSrc: "assets/images/instructors/instructor-2.webp",
+        },
+        {
+            name: "Василий Евгеньевич",
+            age: "33 лет",
+            imageSrc: "assets/images/instructors/instructor-3.webp",
+        },
+        {
+            name: "Семен Викторович",
+            age: "35 лет",
+            imageSrc: "assets/images/instructors/instructor-4.webp",
+        },
+        {
+            name: "Владислав Александрович",
+            age: "37 лет",
+            imageSrc: "assets/images/instructors/instructor-5.webp",
+        },
+        {
+            name: "Александр Ростиславович",
+            age: "36 лет",
+            imageSrc: "assets/images/instructors/instructor-6.webp",
+        }
+    ]
+
+-
+    questions = [
+        {
+            question: "Где находится учебная площадка?",
+            answer: "Сеть автодромов распределена по всему городу — подберем ближайшую к вам площадку."
+        },
+        {
+            question: "Будет ли инструктор на меня кричать?",
+            answer: "Учиться в автошколе будет не страшно — наши инструкторы очень доброжелательны!"
+        },
+        {
+            question: "Что входит в стоимость?",
+            answer: "В нашей автошколе цена обучения включает: полный курс теории, учебники, полный курс практического обучения, бензин, внутренний экзамен, документы в ГИБДД, организованная сдача экзамена в ГИБДД."
+        },
+        {
+            question: "Какие документы требуются для записи в автошколу?",
+            answer: "Вам потребуется паспорт и две фотографии. Если отучиться на права желает несовершеннолетний, потребуется также паспорт одного из родителей и разрешение на обучение и сдачу экзамена в ГИБДД от обоих родителей (нотариально заверенное)."
+        },
+        {
+            question: "На каких машинах проходит обучение?",
+            answer: "Будущие водители категории В учатся в нашей школе только на иномарках. Все автомобили оборудованы дублирующими педалями. В автопарке — Hyundai, Suzuki, Citroen, Chevrolet, Skoda, Ford, Renault."
+        },
+        {
+            question: "Могу я обучаться на автомате?",
+            answer: "Да, конечно, учиться на права вы можете на МКПП и АКПП."
+        },
+        {
+            question: "Со скольки лет можно обучаться?",
+            answer: "По закону РФ обучаться в автошколе и открыть категорию А разрешено с 16 лет, на категорию В можно обучаться с 17 лет, но получить права категории B — с 18 лет."
+        },
+        {
+            question: "Можно ли оплачивать частями?",
+            answer: "Да, учебу на права можно оплатить в три этапа. Первый взнос — 10 000 рублей. Рассрочка без процентов, без участия банков."
+        }
+    ]
+
+//-Карусель автопарк
+-
+    cars = [
+        {
+            name: "Kia Soul",
+            imageSrc: "../assets/images/cars/car-1.webp"
+        },
+        {
+            name: "Renault Duster",
+            imageSrc: "../assets/images/cars/car-2.webp"
+        },
+        {
+            name: "Kia Rio",
+            imageSrc: "../assets/images/cars/car-3.webp"
+        },
+        {
+            name: "Scoda Rapid",
+            imageSrc: "../assets/images/cars/car-4.webp"
+        },
+        {
+            name: "Hyundai Solaris",
+            imageSrc: "../assets/images/cars/car-5.webp"
+        },
+        {
+            name: "Citroen C4",
+            imageSrc: "../assets/images/cars/car-6.webp"
+        },
+    ]
+
+-
+    autoArea =
+            [
+                {
+                    imageSrc: "../assets/images/photos/autoarea-1.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/autoarea-2.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/autoarea-3.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/autoarea-4.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/autoarea-5.webp"
+                }
+            ]
+
+-
+    motoArea =
+            [
+                {
+                    imageSrc: "../assets/images/photos/motoarea-1.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/motoarea-2.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/motoarea-3.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/motoarea-4.webp"
+                },
+                {
+                    imageSrc: "../assets/images/photos/motoarea-5.webp"
+                }
+            ]
+
+-
+    reviews =
+            [
+                {
+                    name: "Андрей",
+                    age: "37 лет",
+                    description: "Позвонил, чтобы узнать, сколько стоит сдать на права и как долго придется учиться. Оказалось, теорию можно осваивать дистанционно, а практика начинается сразу же. Мне все подошло, цены и условия в автошколе адекватные, уже езжу с правами.",
+                    photoSrc: "../assets/images/reviews/review-1.webp"
+                },
+                {
+                    name: "Анатолий",
+                    age: "42 года",
+                    description: "В процессе обучения на категорию Б возникла необходимость поменять площадку для занятий. Сделали без проблем! В этой автошколе чувствуется подход “все для клиента”.",
+                    photoSrc: "../assets/images/reviews/review-2.webp"
+                },
+                {
+                    name: "Михаил",
+                    age: "28 года",
+                    description: "Хорошая автошкола. Компетентные сотрудники по теории и вождению. Нормальные машины. Много филиалов — не нужно пилить через весь город: вышел с работы — 2 минуты и ты на автодроме. По цене вполне подъемно. Сдал на права категории В легко, отучился год назад.",
+                    photoSrc: "../assets/images/reviews/review-3.webp"
+                },
+                {
+                    name: "Кирилл",
+                    age: "23 года",
+                    description: "Классный формат обучения. Удобно, что теория проходит дистанционно. Если не отлынивать, все получается быстро. Не заметил, как учеба в автошколе закончилась. Уже 3 месяца с правами!",
+                    photoSrc: "../assets/images/reviews/review-4.webp"
+                },
+                {
+                    name: "Софья",
+                    age: "19 лет",
+                    description: "Здесь реально крутые преподаватели и инструкторы! Ирина Васильевна, ваши уроки вождения просто незабываемы! Мое мнение — это лучшая автошкола!",
+                    photoSrc: "../assets/images/reviews/review-5.webp"
+                },
+                {
+                    name: "Елена",
+                    age: "24 года",
+                    description: "Отличное качество обучения, хорошие преподаватели и очень тактичные инструкторы! Большой плюс — можно нанять инструктора по вождению, чтобы позаниматься дополнительно. Мне это очень помогло. Сдала экзамен в ГИБДД с первого раза.",
+                    photoSrc: "../assets/images/reviews/review-6.webp"
+                },
+                {
+                    name: "Маргарита",
+                    age: "31 год",
+                    description: "Адекватная цена обучения в автошколе, хороший автопарк и преподаватели-профессионалы. Мне было комфортно учиться водить — отдельное спасибо Семену Викторовичу за терпение и подробный разбор всех ошибок.",
+                    photoSrc: "../assets/images/reviews/review-7.webp"
+                }
+            ]
+

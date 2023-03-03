@@ -1,0 +1,36 @@
+extends _base
+
+block variables
+    - prefixUrl = "../index.html"
+    -
+        navLinks = [
+            {
+                name: "Главная",
+                href: `${prefixUrl}#automoto`
+            },
+            {
+                name: "Цены",
+                href: `${prefixUrl}#categories`
+            },
+            {
+                name: "Филиалы",
+                href: `${prefixUrl}#branches`
+            },
+            {
+                name: "Как проходит обучение",
+                href: `${prefixUrl}#auto-stages`
+            },
+            {
+                name: "Отзывы",
+                href: `${prefixUrl}#reviews`
+            },
+            {
+                name: "Акции",
+                href: `${prefixUrl}#events`
+            }
+        ]
+    - branch = {}
+
+block head
+
+block main

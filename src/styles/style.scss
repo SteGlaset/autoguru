@@ -1,0 +1,27 @@
+@import 'custom.scss';
+@import 'components/_fonts.scss';
+@import 'components/_header.scss';
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.4rem;
+}
+
+a {
+  color: $indigo;
+  text-decoration: none;
+}
+
+.logo {
+  width: 90px;
+  height: auto;
+}
+
+.social__vk {
+  width: 25px;
+  height: 25px;
+}

@@ -1,0 +1,37 @@
+.navbar-toggler {
+  line {
+    transition: all .3s ease-in-out;
+  }
+}
+
+.navbar-toggler:not(.collapsed) {
+  .top {
+    transform: rotate(45deg);
+    transform-origin: 5px 10px;
+  }
+  .middle {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  .bottom {
+    transform: rotate(-45deg);
+  }
+  //.top {
+  //  x1: 0.632812 !important;
+  //  y1: 29.9395 !important;
+  //  x2: 35.6328;
+  //  y2: 1.93945;
+  //}
+  //.middle {
+  //  x1: 18;
+  //  y1: 16;
+  //  x2: 18;
+  //  y2: 16;
+  //}
+  //.bottom {
+  //  x1: 0.632812;
+  //  y1: 1.9395;
+  //  x2: 35.6328;
+  //  y2: 29.9395;
+  //}
+}
