@@ -1,1 +1,21 @@
 footer#footer
+    .container
+        ul.footer__ul
+            li.footer__li
+                a(href="index.html")
+                    img.logo(src=require("../assets/images/logo.webp") alt="Лого АвтоГуру")
+            li.footer__li
+                ul.footer__links-ul
+                    each branch in branches
+                        li.footer__links-li
+                            a(href=branch.href)= branch.name
+            li.footer__li
+                ul.footer__links-ul
+                    li.footer__links-li
+                        a(href=`tel:${phone.notFormatted}`)= phone.formatted
+                    li.footer__links-li
+                        a(href=`mailto:${mail}`)= mail
+                    li.footer__links-li= workTime
+            li.footer__li
+                a(href=vk)
+                    img.social__vk(src=require("../assets/icons/vk.svg") alt="ВКонтакте")

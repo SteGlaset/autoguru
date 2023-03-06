@@ -1,6 +1,8 @@
-@import 'custom.scss';
-@import 'components/_fonts.scss';
-@import 'components/_header.scss';
+@import 'custom';
+@import 'components/_fonts';
+@import 'components/_header';
+@import 'components/_footer';
+@import 'components/_variables';
 
 html {
   font-size: 10px;
@@ -9,6 +11,7 @@ html {
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   font-size: 1.4rem;
+  color: $indigo;
 }
 
 a {
@@ -25,3 +28,20 @@ a {
   width: 25px;
   height: 25px;
 }
+
+.h1 {
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  line-height: 3.1rem;
+  font-weight: 600;
+  margin-block: 50px 59px;
+  .main-title__box {
+    display: inline-block;
+    width: fit-content;
+    background: rgba(243, 180, 115, 0.7);
+    border-radius: 10px;
+    padding: 2px 9px;
+    margin-bottom: 5px;
+  }
+}
+

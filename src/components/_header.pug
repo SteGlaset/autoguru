@@ -1,14 +1,22 @@
 include _variables
 
+.modal#navbarModal(tabindex="-1" aria-hidden="true")
+    .modal-dialog.modal-dialog-centered.modal-sm.d-flex.justify-content-center
+        .modal-content.w-75
+            .modal-body
+                ul.navbar-nav.w-100.justify-content-around.align-items-center
+                    each link in navLinks
+                        li.navigation__link.nav-item(data-bs-dismiss="modal" data-bs-target="#navbarModal" data-bs-toggle="modal")
+                            a.nav-link(href=link.href class= link.active ? "active" : "")= link.name
 header#header.fixed-top
     .container
         nav.navbar.navbar-expand-lg
             a.navbar-brand(href='#')
-                img.logo.navbar__logo(src=require('../assets/images/logo.webp') alt='Лого')
+                img.logo.navbar__logo(src=require('../assets/images/logo.webp') alt='Лого АвтоГуру')
             a.navbar__social(href='https://vk.com')
                 img.logo.social__vk(src=require('../assets/icons/vk.svg') alt='ВКонтакте')
             a.navbar__social(href=`tel:${phone.notFormatted}`)= phone.formatted
-            button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-bs-toggle='modal' data-bs-target='#navbarModal' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
                 svg(xmlns='http://www.w3.org/2000/svg' width='36' height='32' viewBox='0 0 36 32' fill='none')
                     line.top(x1='0.632812' y1='1.93945' x2='35.6328' y2='1.93945' stroke='#000357' stroke-width='3')
                     line.middle(x1='0.632812' y1='15.9395' x2='35.6328' y2='15.9395' stroke='#000357' stroke-width='3')
@@ -21,6 +29,4 @@ header#header.fixed-top
                         a.nav-link(href='#') Features
                     li.nav-item
                         a.nav-link(href='#') Pricing
-                    li.nav-item
-                        a.nav-link.disabled(href='#' tabindex='-1' aria-disabled='true') Disabled
 

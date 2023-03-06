@@ -5,7 +5,293 @@ block variables
 
 block head
     script(src=require("/src/js/index.js"), defer)
+    link(href=require("styles/components/main.scss"), rel="stylesheet")
 
 block main
+    main#main
+        section#autoguru
+            .container
+                h1.h1
+                    span.main-title__box Автошкола АвтоГуру:
+                    br
+                    | Обучение вождению на
+                    br
+                    | категорию А и Б по ГОСТу у
+                    br
+                    | экспертов рынка
+                ul.advantages-ul
+                    li.advantages-li Одна из лучших автошкол с онлайн и офлайн обучением
+                    li.advantages-li Обучение на права опытными педагогами и инструкторами
+                    li.advantages-li Учебные классы и автодромы автошколы по всех районах Москвы
+                    li.advantages-li Автопарк обслуженных иномарок с АКПП / МКПП не старше 5 лет
+                    li.advantages-li Низкие цены, рассрочка на обучение в автошколе без переплат
+        section#questionary
+            .container
+                h2.h2 Учим на права за 3 месяца. Сопровождаем в ГИБДД. 98% курсантов сдают экзамен на права категории Б с 1 раза!
+                 .wrapper
+                     form.form
+        section#about
+            .container.wrapper
+                h2.h2 О НАС
+                p.about__description АвтоГуру закрывает все потребности курсантов по отношению к комфорту, качеству и доступности обучения на права. Желающие получить права категории А или Б могут выбрать подходящий график и филиал. Личный менеджер всегда будет на связи для решения любых вопросов.
+                    br
+                    br
+                    | С будущими водителями работают профессиональные преподаватели и инструкторы, которые объясняют теорию на пальцах и помогают оттачивчить навыки до совершенства.  Практика в нашей школе вождения начинается с первых дней и включает отработку маршрутов ГИБДД. Курсанты легко сдают на права с первой попытки. Предоставляется возможность нанять инструктора по вождению для дополнительных занятий.
+                    br
+                    br
+                    | Стоимость обучения в автошколе фиксирована, включает расходы на топливо, страховку и не меняется в процессе. У нас нет комиссий и скрытых платежей, а оплатить обучение на водительские права можно в рассрочку без процентов.
+                img(src=require("assets/images/about-car.webp") alt="")
+        .studying-n-prices
+            section#studying
+                .container
+                    div.title-box
+                        img.title-box__image(src=require("assets/images/books.webp") alt="Книги")
+                        div
+                            span.title-box__text_smaller Теория
+                            h4.h4.title-box__title Онлайн / Учебные классы у метро
+                    ul.studying__ul
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/laptop-icon.webp") alt="Компьютер")
+                            p.studying__description Оборудованные аудитории с современными ПК, наглядным материалом и симуляторами
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/smartphone-icon.webp") alt="Компьютер")
+                            p.studying__description Онлайн уроки с преподавателями автошколы
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/calendar-icon.webp") alt="Компьютер")
+                            p.studying__description 5 вариантов графика занятий
+                    div.title-box
+                        img.title-box__image(src=require("assets/images/books.webp") alt="Книги")
+                        div
+                            span.title-box__text_smaller Практика
+                            h4.h4.title-box__title Автодромы возле метро
+                    ul.studying__ul
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/instructors-icon.webp") alt="Компьютер")
+                            p.studying__description Обучение вождению автомобиля проводят опытные и тактичные инструкторы
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/point-icon.webp") alt="Компьютер")
+                            p.studying__description Отработка «площадки» на автодромах у метро
+                        li.studying__li
+                            img.studying__icon(src=require("assets/images/car-icon.webp") alt="Компьютер")
+                            p.studying__description Отработка «города» по маршрутам ГИБДД
+            section#prices
+                .container
+                    h2.h2 Цены
+                        ul.prices__ul
+                            li.prices__li.prices__li_active
+                                img.prices__image
+                                h5.prices__title Категория В (МКПП)
+                            li.prices__li
+                                img.prices__image
+                                h5.prices__title Категория В (АКПП)
+                            li.prices__li
+                                img.prices__image
+                                h5.prices__title Категория А
+                            li.prices__li
+                                img.prices__image
+                                h5.prices__title Онлайн обучение
+                    ul.categories__ul
+                        li.categories__li
+                            .cat-inner-card
+                                h4.cat-inner-card__title Программа курса
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Теоретическую часть - 144 часа
+                                    li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
+                                    li.cat-inner-card__li Сопровождение в ГИБДД
+                                    li.cat-inner-card__li Персонального менеджера
+                                    li.cat-inner-card__li Прямую связь с руководством автошколы
+                            .cat-inner-card
+                                h4.cat-inner-card__title График занятий
+                                    span.cat-inner-card__subtitle (выберите удобный для себя)
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Утром с 9.00 до 12.00
+                                    li.cat-inner-card__li Днём с 14.00 до 17.00
+                                    li.cat-inner-card__li Вечером с 18.00 до 21.00
+                                    li.cat-inner-card__li Выходные дни с 10.00 до 14.00 и с 14.00 до 18.00
+                            .cat-inner-card
+                                h4.cat-inner-card__title Онлайн
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 26 000 руб
+                                    li.cat-inner-card__li 40 часов практики:
+                                        span.cat-inner-card__text_right 37 000 руб
+                                    li.cat-inner-card__li 56 часов практики:
+                                        span.cat-inner-card__text_right 47 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 3 месяца
+                            .cat-inner-card
+                                h4.cat-inner-card__title В классе
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 29 000 руб
+                                    li.cat-inner-card__li 40 часов практики:
+                                        span.cat-inner-card__text_right 40 000 руб
+                                    li.cat-inner-card__li 56 часов практики:
+                                        span.cat-inner-card__text_right 50 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 4 месяца
+                        +cardModal("orange")
+                        li.categories__li
+                            .cat-inner-card
+                                h4.cat-inner-card__title Программа курса
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Теоретическую часть - 144 часа
+                                    li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
+                                    li.cat-inner-card__li Сопровождение в ГИБДД
+                                    li.cat-inner-card__li Персонального менеджера
+                                    li.cat-inner-card__li Прямую связь с руководством автошколы
+                            .cat-inner-card
+                                h4.cat-inner-card__title График занятий
+                                    span.cat-inner-card__subtitle (выберите удобный для себя)
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Утром с 9.00 до 12.00
+                                    li.cat-inner-card__li Днём с 14.00 до 17.00
+                                    li.cat-inner-card__li Вечером с 18.00 до 21.00
+                                    li.cat-inner-card__li Выходные дни с 10.00 до 14.00 и с 14.00 до 18.00
+                            .cat-inner-card
+                                h4.cat-inner-card__title Онлайн
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 28 000 руб
+                                    li.cat-inner-card__li 40 часов практики:
+                                        span.cat-inner-card__text_right 39 000 руб
+                                    li.cat-inner-card__li 56 часов практики:
+                                        span.cat-inner-card__text_right 49 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 3 месяца
+                            .cat-inner-card
+                                h4.cat-inner-card__title В классе
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 31 000 руб
+                                    li.cat-inner-card__li 40 часов практики:
+                                        span.cat-inner-card__text_right 42 000 руб
+                                    li.cat-inner-card__li 56 часов практики:
+                                        span.cat-inner-card__text_right 52 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 3 месяца
+                        +cardModal("orange")
+                        li.categories__li
+                            .cat-inner-card
+                                h4.cat-inner-card__title Программа курса
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Теоретическую часть - 144 часа
+                                    li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
+                                    li.cat-inner-card__li Сопровождение в ГИБДД
+                                    li.cat-inner-card__li Персонального менеджера
+                                    li.cat-inner-card__li Прямую связь с руководством автошколы
+                            .cat-inner-card
+                                h4.cat-inner-card__title График занятий
+                                    span.cat-inner-card__subtitle (выберите удобный для себя)
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Утром с 9.00 до 12.00
+                                    li.cat-inner-card__li Днём с 14.00 до 17.00
+                                    li.cat-inner-card__li Вечером с 18.00 до 21.00
+                                    li.cat-inner-card__li Выходные дни с 10.00 до 14.00 и с 14.00 до 18.00
+                            .cat-inner-card
+                                h4.cat-inner-card__title Онлайн
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 20 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 1,5-2 месяца
+                            .cat-inner-card
+                                h4.cat-inner-card__title В классе
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 25 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 1,5-2 месяца
+                        +cardModal("orange")
+                        li.categories__li
+                            .cat-inner-card
+                                h4.cat-inner-card__title Программа курса
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Теоретическую часть - 144 часа
+                                    li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
+                                    li.cat-inner-card__li Сопровождение в ГИБДД
+                                    li.cat-inner-card__li Персонального менеджера
+                                    li.cat-inner-card__li Прямую связь с руководством автошколы
+                            .cat-inner-card
+                                h4.cat-inner-card__title График занятий
+                                    span.cat-inner-card__subtitle (выберите удобный для себя)
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li Утром с 9.00 до 12.00
+                                    li.cat-inner-card__li Днём с 14.00 до 17.00
+                                    li.cat-inner-card__li Вечером с 18.00 до 21.00
+                                    li.cat-inner-card__li Выходные дни с 10.00 до 14.00 и с 14.00 до 18.00
+                            .cat-inner-card
+                                h4.cat-inner-card__title Онлайн
+                                ul.cat-inner-card__ul
+                                    li.cat-inner-card__li 20 часов практики:
+                                        span.cat-inner-card__text_right 26 000 руб
+                                    li.cat-inner-card__li 40 часов практики:
+                                        span.cat-inner-card__text_right 37 000 руб
+                                    li.cat-inner-card__li 56 часов практики:
+                                        span.cat-inner-card__text_right 47 000 руб
+                                    li.cat-inner-card__li Срок обучения:
+                                        span.cat-inner-card__text_right 3 месяца
+                        +cardModal("orange")
+            section#instalment
+                .container
+                    h3.h3 Рассрочка 0%
+                    p.instalment-description Начните обучение сразу после внесения первоначальной оплаты. Не ждите, пока заплатите всю сумму, начните осуществлять свою мечту уже сейчас!
+                    p.instalment-description Рассрочка предоставляется на срок 2 месяца. Такой способ оплаты подходит для любой категории, из представленных в нашей автошколе.
+                    img.instalment-image(src=require("assets/images/instalment.webp") alt="")
+            section#instructors
+                .container
+                    h3.h3 Инструкторы
+                    .carousel
+            section#autopark
+                .container
+                    h3.h3 Автопарк
+                    .carousel
+            section#branches
+                .container
+                    h3.h3 Филиалы
+                    .map
+                    +cardModal()
+            section#reviews
+                .container
+                    h3.h3 Отзывы
+                    .carousel
+            section#license
+                .container
+                    img.license__image(src=require("assets/images/license.webp") alt="Лицензия")
+                    p.license__description Автошкола имеет все предусмотренные законом разрешения
+                        | и лицензию на осуществление образовательной деятельности, в соответствии
+                        | с постановлением
+                        span.license__description_bold Правительства Российской Федерации от 28 октября 2013 г. № 966 “О лицензировании образовательной деятельности”
+                        | программы обучения в автошколе согласованы с Госавтоинспекцией, получено заключение Госавтоинспекции
+                        | о соответствии учебно-материальной базы установленным Законом требованиям.
+            section#contacts
+                .container.wrapper
+                    .contact-block
+                        img.contact-block__icon(src=require("assets/images/phone.webp") alt="Телефон")
+                        .contact-text-block
+                            p.contact-text-block__title Позвоните нам
+                            p.contact-text-block__description= phone.formatted
+                    .contact-block
+                        img.contact-block__icon(src=require("assets/images/mail.webp") alt="Сообщение")
+                        .contact-text-block
+                            p.contact-text-block__title Напишите нам
+                            p.contact-text-block__description= mail
+                    .contact-block
+                        img.contact-block__icon(src=require("assets/images/clock.webp") alt="Часы")
+                        .contact-text-block
+                            p.contact-text-block__title Мы работаем для Вас
+                            p.contact-text-block__description= workTime
+                    hr
+                    h4.h4 Мы принимаем к оплате
+                    .d-flex.justify-content-center
+                        img.contacts__image(src=require("assets/images/visa.webp") alt="Visa")
+                        img.contacts__image(src=require("assets/images/mastercard.webp") alt="MasterCard")
+                    h4.h4 Мы в социальных сетях
+                    a(href=vk)
+                        img.contacts__social-icon(src=require("assets/icons/vk.svg") alt="ВКонтакте")
+
+
+
+
 
 

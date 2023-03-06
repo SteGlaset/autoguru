@@ -1,0 +1,10 @@
+@import '../variables';
+
+#autoguru {
+  height: calc(120vh - $header-height);
+  background: url("../../../assets/images/background/trail-bg.webp") no-repeat,
+              url("../../../assets/images/background/car-n-moto-bg.webp") no-repeat 50% 100%,
+              url("../../../assets/images/background/city-bg.webp") no-repeat 100% 65%;
+  background-size: 190px auto, 353px auto, 295px auto;
+  padding-top: $header-height;
+}
