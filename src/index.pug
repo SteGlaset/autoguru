@@ -22,76 +22,84 @@ block main
                 ul.advantages-ul
                     li.advantages-li Одна из лучших автошкол с онлайн и офлайн обучением
                     li.advantages-li Обучение на права опытными педагогами и инструкторами
-                    li.advantages-li Учебные классы и автодромы автошколы по всех районах Москвы
+                    li.advantages-li Учебные классы и автодромы автошколы во всех районах Москвы
                     li.advantages-li Автопарк обслуженных иномарок с АКПП / МКПП не старше 5 лет
                     li.advantages-li Низкие цены, рассрочка на обучение в автошколе без переплат
         section#questionary
             .container
-                h2.h2 Учим на права за 3 месяца. Сопровождаем в ГИБДД. 98% курсантов сдают экзамен на права категории Б с 1 раза!
+                h2.h2.text-uppercase Учим на права за 3 месяца. Сопровождаем в ГИБДД. 98% курсантов сдают экзамен на права категории Б с 1 раза!
                  .wrapper
                      form.form
         section#about
-            .container.wrapper
-                h2.h2 О НАС
-                p.about__description АвтоГуру закрывает все потребности курсантов по отношению к комфорту, качеству и доступности обучения на права. Желающие получить права категории А или Б могут выбрать подходящий график и филиал. Личный менеджер всегда будет на связи для решения любых вопросов.
-                    br
-                    br
-                    | С будущими водителями работают профессиональные преподаватели и инструкторы, которые объясняют теорию на пальцах и помогают оттачивчить навыки до совершенства.  Практика в нашей школе вождения начинается с первых дней и включает отработку маршрутов ГИБДД. Курсанты легко сдают на права с первой попытки. Предоставляется возможность нанять инструктора по вождению для дополнительных занятий.
-                    br
-                    br
-                    | Стоимость обучения в автошколе фиксирована, включает расходы на топливо, страховку и не меняется в процессе. У нас нет комиссий и скрытых платежей, а оплатить обучение на водительские права можно в рассрочку без процентов.
-                img(src=require("assets/images/about-car.webp") alt="")
+            .container
+                .wrapper
+                    h2.h2.text-uppercase О нас
+                    p.about__description АвтоГуру закрывает все потребности курсантов по отношению к комфорту, качеству и доступности обучения на права. Желающие получить права категории А или Б могут выбрать подходящий график и филиал. Личный менеджер всегда будет на связи для решения любых вопросов.
+                        br
+                        br
+                        | С будущими водителями работают профессиональные преподаватели и инструкторы, которые объясняют теорию на пальцах и помогают оттачивчить навыки до совершенства.  Практика в нашей школе вождения начинается с первых дней и включает отработку маршрутов ГИБДД. Курсанты легко сдают на права с первой попытки. Предоставляется возможность нанять инструктора по вождению для дополнительных занятий.
+                        br
+                        br
+                        | Стоимость обучения в автошколе фиксирована, включает расходы на топливо, страховку и не меняется в процессе. У нас нет комиссий и скрытых платежей, а оплатить обучение на водительские права можно в рассрочку без процентов.
+                    img.about-image(src=require("assets/images/about-car.webp") alt="")
+                    +cardModal('button_center')
         .studying-n-prices
             section#studying
                 .container
-                    div.title-box
+                    div.title-box.d-flex.align-items-center
                         img.title-box__image(src=require("assets/images/books.webp") alt="Книги")
                         div
                             span.title-box__text_smaller Теория
                             h4.h4.title-box__title Онлайн / Учебные классы у метро
                     ul.studying__ul
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/laptop-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/laptop-icon.webp") alt="Компьютер")
                             p.studying__description Оборудованные аудитории с современными ПК, наглядным материалом и симуляторами
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/smartphone-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/smartphone-icon.webp") alt="Компьютер")
                             p.studying__description Онлайн уроки с преподавателями автошколы
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/calendar-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/calendar-icon.webp") alt="Компьютер")
                             p.studying__description 5 вариантов графика занятий
-                    div.title-box
-                        img.title-box__image(src=require("assets/images/books.webp") alt="Книги")
+                    div.title-box.d-flex.align-items-center
+                        img.title-box__image(src=require("assets/images/wheel.webp") alt="Книги")
                         div
                             span.title-box__text_smaller Практика
                             h4.h4.title-box__title Автодромы возле метро
                     ul.studying__ul
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/instructors-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/instructors-icon.webp") alt="Компьютер")
                             p.studying__description Обучение вождению автомобиля проводят опытные и тактичные инструкторы
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/point-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/point-icon.webp") alt="Компьютер")
                             p.studying__description Отработка «площадки» на автодромах у метро
-                        li.studying__li
-                            img.studying__icon(src=require("assets/images/car-icon.webp") alt="Компьютер")
+                        li.studying__li.d-flex.align-items-center
+                            .studying__icon-box.d-flex.align-items-center.justify-content-center
+                                img.studying__icon(src=require("assets/images/car-icon.webp") alt="Компьютер")
                             p.studying__description Отработка «города» по маршрутам ГИБДД
             section#prices
                 .container
                     h2.h2 Цены
-                        ul.prices__ul
-                            li.prices__li.prices__li_active
-                                img.prices__image
+                        .prices__list.d-flex.justify-content-center.flex-wrap
+                            button.prices__item.prices__li_active.d-flex.align-items-center.active
+                                p.prices__category B
                                 h5.prices__title Категория В (МКПП)
-                            li.prices__li
-                                img.prices__image
+                            button.prices__item.d-flex.align-items-center
+                                p.prices__category B
                                 h5.prices__title Категория В (АКПП)
-                            li.prices__li
-                                img.prices__image
+                            button.prices__item.d-flex.align-items-center
+                                p.prices__category A
                                 h5.prices__title Категория А
-                            li.prices__li
-                                img.prices__image
+                            button.prices__item.d-flex.align-items-center
+                                p.prices__category O
                                 h5.prices__title Онлайн обучение
                     ul.categories__ul
-                        li.categories__li
+                        li.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -130,8 +138,8 @@ block main
                                         span.cat-inner-card__text_right 50 000 руб
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 4 месяца
-                        +cardModal("orange")
-                        li.categories__li
+                            +cardModal("button_center button_orange")
+                        li.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -142,7 +150,9 @@ block main
                                     li.cat-inner-card__li Прямую связь с руководством автошколы
                             .cat-inner-card
                                 h4.cat-inner-card__title График занятий
-                                    span.cat-inner-card__subtitle (выберите удобный для себя)
+                                    span.cat-inner-card__subtitle
+                                    br
+                                    |(выберите удобный для себя)
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li Утром с 9.00 до 12.00
                                     li.cat-inner-card__li Днём с 14.00 до 17.00
@@ -170,8 +180,8 @@ block main
                                         span.cat-inner-card__text_right 52 000 руб
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 3 месяца
-                        +cardModal("orange")
-                        li.categories__li
+                            +cardModal("button_center button_orange")
+                        li.categories__li.wrapper.active
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -202,8 +212,8 @@ block main
                                         span.cat-inner-card__text_right 25 000 руб
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 1,5-2 месяца
-                        +cardModal("orange")
-                        li.categories__li
+                            +cardModal("button_center button_orange")
+                        li.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -231,29 +241,30 @@ block main
                                         span.cat-inner-card__text_right 47 000 руб
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 3 месяца
-                        +cardModal("orange")
+                            +cardModal("button_center button_orange")
             section#instalment
                 .container
                     h3.h3 Рассрочка 0%
                     p.instalment-description Начните обучение сразу после внесения первоначальной оплаты. Не ждите, пока заплатите всю сумму, начните осуществлять свою мечту уже сейчас!
+                    br
                     p.instalment-description Рассрочка предоставляется на срок 2 месяца. Такой способ оплаты подходит для любой категории, из представленных в нашей автошколе.
                     img.instalment-image(src=require("assets/images/instalment.webp") alt="")
             section#instructors
                 .container
-                    h3.h3 Инструкторы
+                    h2.h2 Инструкторы
                     .carousel
             section#autopark
                 .container
-                    h3.h3 Автопарк
+                    h2.h2 Автопарк
                     .carousel
             section#branches
                 .container
-                    h3.h3 Филиалы
+                    h2.h2 Филиалы
                     .map
-                    +cardModal()
+                    +cardModal("button_center")
             section#reviews
                 .container
-                    h3.h3 Отзывы
+                    h2.h2 Отзывы
                     .carousel
             section#license
                 .container
@@ -261,34 +272,43 @@ block main
                     p.license__description Автошкола имеет все предусмотренные законом разрешения
                         | и лицензию на осуществление образовательной деятельности, в соответствии
                         | с постановлением
+                        |
                         span.license__description_bold Правительства Российской Федерации от 28 октября 2013 г. № 966 “О лицензировании образовательной деятельности”
+                        |
                         | программы обучения в автошколе согласованы с Госавтоинспекцией, получено заключение Госавтоинспекции
                         | о соответствии учебно-материальной базы установленным Законом требованиям.
             section#contacts
-                .container.wrapper
-                    .contact-block
-                        img.contact-block__icon(src=require("assets/images/phone.webp") alt="Телефон")
-                        .contact-text-block
-                            p.contact-text-block__title Позвоните нам
-                            p.contact-text-block__description= phone.formatted
-                    .contact-block
-                        img.contact-block__icon(src=require("assets/images/mail.webp") alt="Сообщение")
-                        .contact-text-block
-                            p.contact-text-block__title Напишите нам
-                            p.contact-text-block__description= mail
-                    .contact-block
-                        img.contact-block__icon(src=require("assets/images/clock.webp") alt="Часы")
-                        .contact-text-block
-                            p.contact-text-block__title Мы работаем для Вас
-                            p.contact-text-block__description= workTime
-                    hr
-                    h4.h4 Мы принимаем к оплате
-                    .d-flex.justify-content-center
-                        img.contacts__image(src=require("assets/images/visa.webp") alt="Visa")
-                        img.contacts__image(src=require("assets/images/mastercard.webp") alt="MasterCard")
-                    h4.h4 Мы в социальных сетях
-                    a(href=vk)
-                        img.contacts__social-icon(src=require("assets/icons/vk.svg") alt="ВКонтакте")
+                .container
+                    h2.h2 Контакты
+                    .wrapper.contacts__wrapper
+                        .contact-block.d-flex
+                            .contact-block__icon-box
+                                img.contact-block__icon.d-block.mx-auto(src=require("assets/images/phone.webp") alt="Телефон")
+                            .contact-text-block
+                                p.contact-text-block__title Позвоните нам
+                                a.link.contact-text-block__description(href=`tel:${phone.notFormatted}`)= phone.formatted
+                        .contact-block.d-flex
+                            .contact-block__icon-box
+                                img.contact-block__icon.d-block.mx-auto(src=require("assets/images/mail.webp") alt="Сообщение")
+                            .contact-text-block
+                                p.contact-text-block__title Напишите нам
+                                a.link.contact-text-block__description(href=`mailto:${mail}`)= mail
+                        .contact-block.d-flex
+                            .contact-block__icon-box
+                                img.contact-block__icon.d-block.mx-auto(src=require("assets/images/clock.webp") alt="Часы")
+                            .contact-text-block
+                                p.contact-text-block__title Мы работаем для Вас
+                                p.contact-text-block__description= workTime
+                        hr.contacts__line
+                        h3.h3 Мы принимаем к оплате
+                        .d-flex.justify-content-center.align-items-center
+                            img.contacts__image(src=require("assets/images/visa.webp") alt="Visa")
+                            img.contacts__image(src=require("assets/images/mastercard.webp") alt="MasterCard")
+                        h3.h3 Мы в социальных сетях
+                        a(href=vk)
+                            svg.social__icon.contacts__social-icon(width='26' height='26' viewBox='0 0 26 26' fill='none' xmlns='http://www.w3.org/2000/svg')
+                                path(d='M13.1328 0.439453C6.22949 0.439453 0.632812 6.03587 0.632812 12.9395C0.632812 19.843 6.22949 25.4395 13.1328 25.4395C20.0361 25.4395 25.6328 19.843 25.6328 12.9395C25.6328 6.03587 20.0361 0.439453 13.1328 0.439453ZM19.4735 14.2914C20.0561 14.8604 20.6725 15.396 21.1955 16.0239C21.4272 16.3016 21.6456 16.5888 21.8118 16.9118C22.0492 17.3724 21.8349 17.8776 21.4226 17.9049L18.8617 17.9044C18.2003 17.9591 17.674 17.6924 17.2303 17.2402C16.876 16.8799 16.5474 16.495 16.2062 16.1223C16.0668 15.9694 15.92 15.8254 15.7451 15.7121C15.396 15.485 15.0927 15.5545 14.8927 15.9192C14.6888 16.2903 14.6423 16.7016 14.6228 17.1146C14.595 17.7185 14.4129 17.8763 13.807 17.9047C12.5124 17.9653 11.284 17.7689 10.1423 17.1162C9.13511 16.5405 8.35557 15.7279 7.67629 14.808C6.35353 13.0146 5.34049 11.0464 4.43025 9.02155C4.2254 8.56554 4.37527 8.32155 4.87834 8.31209C5.71414 8.29597 6.54995 8.29802 7.38575 8.31132C7.72591 8.31669 7.95097 8.51132 8.08166 8.83229C8.53332 9.94355 9.08703 11.0008 9.78089 11.9814C9.96581 12.2425 10.1546 12.5029 10.4233 12.6873C10.72 12.8909 10.9461 12.8236 11.086 12.4924C11.1755 12.2819 11.2141 12.0568 11.2336 11.8313C11.3001 11.0586 11.308 10.2863 11.1929 9.51669C11.1213 9.03511 10.8505 8.72411 10.3704 8.63306C10.1259 8.58677 10.1617 8.49623 10.2806 8.35659C10.487 8.11516 10.6804 7.9658 11.0668 7.9658L13.9602 7.96528C14.4162 8.0548 14.5185 8.2594 14.5804 8.71874L14.5829 11.9341C14.5776 12.1118 14.6722 12.6387 14.9914 12.7551C15.2471 12.8395 15.4159 12.6343 15.5689 12.4724C16.2627 11.7361 16.7571 10.8671 17.1998 9.96759C17.3952 9.57091 17.5638 9.16043 17.7274 8.74917C17.8492 8.44508 18.0384 8.29546 18.3817 8.30058L21.1679 8.3039C21.2499 8.3039 21.3333 8.30467 21.4147 8.31874C21.8842 8.39904 22.0129 8.60109 21.8676 9.05915C21.639 9.77884 21.1947 10.3783 20.7604 10.9794C20.295 11.6228 19.7985 12.2438 19.3377 12.8901C18.9141 13.4809 18.9476 13.7783 19.4735 14.2914Z' fill='#000357')
+
 
 
 

@@ -1,1 +1,50 @@
 @import '../variables';
+
+#contacts {
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
+
+.contacts__wrapper {
+  padding: 40px 45px;
+}
+
+.contact-block {
+  margin-bottom: 20px;
+}
+
+.contact-block__icon-box {
+  height: 45px;
+  width: 50px;
+  margin-right: 20px;
+}
+
+.contact-block__icon {
+  height: 45px;
+  width: auto;
+}
+
+.contact-text-block__title {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.contacts__line {
+  width: 210px;
+  border: 1px solid #000357;
+  margin: 30px auto;
+}
+
+.contacts__image {
+  width: 60px;
+  height: fit-content;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+.contacts__social-icon {
+  display: block;
+  width: 40px;
+  height: auto;
+  margin-inline: auto;
+}

@@ -67,3 +67,21 @@ $orange:  #D54E0A;
     line-height: 42px;
   }
 }
+
+.container {
+  padding-right: calc(var(--bs-gutter-x)*1);
+  padding-left: calc(var(--bs-gutter-x)*1);
+}
+
+ol, ul {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+hr {
+  opacity: 1;
+}

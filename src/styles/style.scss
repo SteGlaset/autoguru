@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  color: $indigo;
+}
+
 .logo {
   width: 90px;
   height: auto;
@@ -34,7 +38,7 @@ a {
   font-size: 2.4rem;
   line-height: 3.1rem;
   font-weight: 600;
-  margin-block: 50px 59px;
+  margin-block: 40px 59px;
   .main-title__box {
     display: inline-block;
     width: fit-content;
@@ -42,6 +46,69 @@ a {
     border-radius: 10px;
     padding: 2px 9px;
     margin-bottom: 5px;
+  }
+}
+
+.h2 {
+  max-width: 90vw;
+  font-weight: 600;
+  font-size: 2.4rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.h3 {
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.h4 {
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  background: #FFFFFF;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 40px 20px;
+}
+
+.button {
+  color: #FFF;
+  font-weight: 500;
+  background: linear-gradient(180deg, #7C82FF 0%, #131661 100%);
+  padding: 10px;
+  border-radius: 10px;
+  transition: all .2s;
+  &_center {
+    display: block;
+    width: fit-content;
+    margin-inline: auto;
+  }
+  &_orange {
+    background: linear-gradient(180deg, #FFAB5E 0%, #FF6B00 100%);
+  }
+  &:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.social__icon {
+  path {
+    transition: all .1s;
+  }
+  &:hover path {
+    fill: #D54E0A !important;
+  }
+}
+
+.link {
+  transition: all .1s;
+  &:hover {
+    color: #D54E0A;
   }
 }
 

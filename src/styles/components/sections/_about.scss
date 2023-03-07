@@ -1,1 +1,18 @@
 @import '../variables';
+
+#about {
+  margin-bottom: 60px;
+}
+
+.about__description {
+  margin-bottom: 30px;
+}
+
+.about-image {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+

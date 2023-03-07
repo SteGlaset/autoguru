@@ -1,10 +1,20 @@
 @import '../variables';
 
 #autoguru {
-  height: calc(120vh - $header-height);
+  height: calc(150vh - $header-height);
   background: url("../../../assets/images/background/trail-bg.webp") no-repeat,
               url("../../../assets/images/background/car-n-moto-bg.webp") no-repeat 50% 100%,
-              url("../../../assets/images/background/city-bg.webp") no-repeat 100% 65%;
-  background-size: 190px auto, 353px auto, 295px auto;
+              url("../../../assets/images/background/city-bg.webp") no-repeat 100% 90%;
+  background-size: 220px auto, 353px auto, 295px auto;
   padding-top: $header-height;
+  .advantages-ul {
+    padding-left: 2rem;
+  }
+  .advantages-li {
+    max-width: 70vw;
+    list-style: disc;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
 }

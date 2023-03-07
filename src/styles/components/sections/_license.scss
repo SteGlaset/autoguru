@@ -1,1 +1,22 @@
 @import '../variables';
+
+#license {
+  margin-top: 60px;
+}
+
+.license__image {
+  display: block;
+  width: 110px;
+  height: auto;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.license__description {
+  width: 70%;
+  text-align: center;
+  margin-inline: auto;
+  &_bold {
+    font-weight: 500;
+  }
+}
