@@ -17,6 +17,7 @@
   border: none;
   border-radius: 10px;
   overflow: hidden;
+  transition: all .2s;
   &.active {
     background: linear-gradient(180deg, #FFAB5E 0%, #FF6B00 100%);
     .prices__category {
@@ -46,6 +47,7 @@
   margin-left: -16px;
   margin-top: -7px;
   position: relative;
+  transition: all .2s;
 
 }
 
@@ -53,6 +55,7 @@
   font-family: 'IBM Plex Sans',sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
+  transition: all .2s;
 }
 
 .cat-inner-card__subtitle {

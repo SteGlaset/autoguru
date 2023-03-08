@@ -8,7 +8,7 @@ include _variables
                     each link in navLinks
                         li.navigation__link.nav-item(data-bs-dismiss="modal" data-bs-target="#navbarModal" data-bs-toggle="modal")
                             a.link.nav-link(href=link.href class= link.active ? "active" : "")= link.name
-header#header.fixed-top
+header#header.fixed-top.d-flex.align-items-center
     .container
         nav.navbar.navbar-expand-lg
             a.navbar-brand(href='#')

@@ -86,20 +86,20 @@ block main
                 .container
                     h2.h2 Цены
                         .prices__list.d-flex.justify-content-center.flex-wrap
-                            button.prices__item.prices__li_active.d-flex.align-items-center.active
+                            button.prices__item.prices__li_active.d-flex.align-items-center.active(data-for="#cat-1")
                                 p.prices__category B
                                 h5.prices__title Категория В (МКПП)
-                            button.prices__item.d-flex.align-items-center
+                            button.prices__item.d-flex.align-items-center(data-for="#cat-2")
                                 p.prices__category B
                                 h5.prices__title Категория В (АКПП)
-                            button.prices__item.d-flex.align-items-center
+                            button.prices__item.d-flex.align-items-center(data-for="#cat-3")
                                 p.prices__category A
                                 h5.prices__title Категория А
-                            button.prices__item.d-flex.align-items-center
+                            button.prices__item.d-flex.align-items-center(data-for="#cat-4")
                                 p.prices__category O
                                 h5.prices__title Онлайн обучение
                     ul.categories__ul
-                        li.categories__li.wrapper
+                        li#cat-1.categories__li.wrapper.active
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -139,7 +139,7 @@ block main
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 4 месяца
                             +cardModal("button_center button_orange")
-                        li.categories__li.wrapper
+                        li#cat-2.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -150,9 +150,7 @@ block main
                                     li.cat-inner-card__li Прямую связь с руководством автошколы
                             .cat-inner-card
                                 h4.cat-inner-card__title График занятий
-                                    span.cat-inner-card__subtitle
-                                    br
-                                    |(выберите удобный для себя)
+                                    span.cat-inner-card__subtitle (выберите удобный для себя)
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li Утром с 9.00 до 12.00
                                     li.cat-inner-card__li Днём с 14.00 до 17.00
@@ -181,7 +179,7 @@ block main
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 3 месяца
                             +cardModal("button_center button_orange")
-                        li.categories__li.wrapper.active
+                        li#cat-3.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -213,7 +211,7 @@ block main
                                     li.cat-inner-card__li Срок обучения:
                                         span.cat-inner-card__text_right 1,5-2 месяца
                             +cardModal("button_center button_orange")
-                        li.categories__li.wrapper
+                        li#cat-4.categories__li.wrapper
                             .cat-inner-card
                                 h4.cat-inner-card__title Программа курса
                                 ul.cat-inner-card__ul
@@ -252,11 +250,11 @@ block main
             section#instructors
                 .container
                     h2.h2 Инструкторы
-                    .carousel
+                    +carousel("instructor")
             section#autopark
                 .container
                     h2.h2 Автопарк
-                    .carousel
+                    +carousel("autopark")
             section#branches
                 .container
                     h2.h2 Филиалы
@@ -265,7 +263,7 @@ block main
             section#reviews
                 .container
                     h2.h2 Отзывы
-                    .carousel
+                    +carousel("review")
             section#license
                 .container
                     img.license__image(src=require("assets/images/license.webp") alt="Лицензия")

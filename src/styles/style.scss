@@ -50,7 +50,6 @@ button {
 }
 
 .h2 {
-  max-width: 90vw;
   font-weight: 600;
   font-size: 2.4rem;
   text-align: center;
@@ -110,5 +109,84 @@ button {
   &:hover {
     color: #D54E0A;
   }
+}
+
+.autopark-image {
+  display: block;
+  max-width: 60vw;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.autopark-description {
+  text-align: center;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  opacity: .9;
+  overflow: visible;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 47px;
+  height: 47px;
+  filter: drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.4));
+}
+
+.carousel-wrapper {
+  margin: 30px;
+  padding: 20px 25px;
+}
+
+.review-header {
+  margin-bottom: 16px;
+}
+
+.review-avatar {
+  width: 37px;
+  height: 37px;
+  margin-right: 8px;
+}
+
+.review-header-text {
+  font-size: 1.6rem;
+}
+
+.review-description {
+  font-size: 1.6rem;
+}
+
+.instructor-image {
+  display: block;
+  width: 120px;
+  border: 1px solid #FF690F;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: content-box;
+  margin-inline: auto;
+  margin-bottom: 30px;
+}
+
+.text-block {
+  text-align: center;
+}
+
+.instructor-name,
+.instructor-experience {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.instructor-experience {
+  margin-bottom: 20px;
+}
+
+.instructor-experience-lighter {
+  font-weight: 400;
 }
 
