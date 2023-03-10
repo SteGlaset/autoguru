@@ -82,6 +82,7 @@ button {
   padding: 10px;
   border-radius: 10px;
   transition: all .2s;
+  justify-self: center;
   &_center {
     display: block;
     width: fit-content;
@@ -188,5 +189,10 @@ button {
 
 .instructor-experience-lighter {
   font-weight: 400;
+}
+
+.flex-break {
+  flex-basis: 100%;
+  height: 0;
 }
 

@@ -5,7 +5,8 @@
 }
 
 .prices__list {
-  margin-block: 20px 71px;
+  max-width: 500px;
+  margin: 20px auto 71px;
   gap: 20px;
 }
 
@@ -59,7 +60,7 @@
 }
 
 .cat-inner-card__subtitle {
-  display: inline-block;
+  display: block;
 }
 
 .categories__li {
@@ -102,13 +103,55 @@
   list-style: disc;
 }
 
+.cat-inner-card__text {
+  width: 50%;
+}
+
+.cat-inner-card__text {
+  display: inline-block;
+}
+
 .cat-inner-card__text_right {
-  width: 100%;
-  text-align: end;
+  width: fit-content;
+  margin-left: auto;
 }
 
 @media screen and (min-width: 400px) {
   .prices__item {
     width: 170px;
+  }
+}
+
+@media screen and (min-width: $sm) {
+  .cat-inner-card__text {
+    width: 70%;
+  }
+
+  .cat-inner-card__text_right {
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .prices__list {
+    max-width: 100%;
+  }
+
+  .categories__li {
+    &.active {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 20px;
+      justify-content: space-between;
+    }
+  }
+
+
+  .cat-inner-card {
+    width: 48%;
+    &:last-of-type {
+      margin-bottom: 20px;
+    }
   }
 }

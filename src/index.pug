@@ -10,15 +10,10 @@ block head
 block main
     main#main
         section#autoguru
-            .container
+            .container.autoguru__container
                 h1.h1
                     span.main-title__box Автошкола АвтоГуру:
-                    br
-                    | Обучение вождению на
-                    br
-                    | категорию А и Б по ГОСТу у
-                    br
-                    | экспертов рынка
+                    p Обучение вождению на категорию А и Б по ГОСТу у экспертов рынка
                 ul.advantages-ul
                     li.advantages-li Одна из лучших автошкол с онлайн и офлайн обучением
                     li.advantages-li Обучение на права опытными педагогами и инструкторами
@@ -28,8 +23,53 @@ block main
         section#questionary
             .container
                 h2.h2.text-uppercase Учим на права за 3 месяца. Сопровождаем в ГИБДД. 98% курсантов сдают экзамен на права категории Б с 1 раза!
-                 .wrapper
-                     form.form
+                .wrapper
+                    .indicators
+                        #indicator_1.question__indicator.col-4.indicator_active
+                        #indicator_2.question__indicator.col-4
+                        #indicator_3.question__indicator.col-4
+                    p.question_count Вопрос 1 из 3
+                    #question_1.question.question_active
+                        p.question__title.w-100 Каков Ваш уровень вождения автомобиля/мотоцикла?
+                        input#answer-1-1.answer(type="radio" name="answer" checked)
+                        label#label-1-1.answer-label(for="answer-1-1")
+                            img.answer__image.answer__bordered(src=require("assets/images/questionary/answer-1.webp") alt="")
+                            p.answer__text Нулевой
+                            p.answer__description (никогда не сидел(а) за рулем)
+                        input#answer-1-2.answer(type="radio" name="answer")
+                        label#label-1-2.answer-label(for="answer-1-2")
+                            img.answer__image.answer__bordered(src=require("assets/images/questionary/answer-2.webp") alt="")
+                            p.answer__text Начальный уровень
+                            p.answer__description (кое-что умею, но очень неуверенно)
+                        input#answer-1-3.answer(type="radio" name="answer")
+                        label#label-1-3.answer-label(for="answer-1-3")
+                            img.answer__image.answer__bordered(src=require("assets/images/questionary/answer-3.webp") alt="")
+                            p.answer__text Базовый
+                            p.answer__description (умею водить, но нет водительского удостоверения)
+                        input#answer-1-4.answer(type="radio" name="answer")
+                        label#label-1-4.answer-label(for="answer-1-4")
+                            img.answer__image.answer__bordered(src=require("assets/images/questionary/answer-4.webp") alt="")
+                            p.answer__text Опытный водитель
+                            p.answer__description (имею водительское удостоверение другого государства)
+                    #question_2.question
+                        p.question__title Когда планируете приступить к обучению?
+                        input#answer-2-1.answer(type="radio" name="answer")
+                        label#label-2-1.answer-label(for="answer-2-1")
+                            p.answer__text.answer__bordered Как можно скорее
+                        input#answer-2-2.answer(type="radio" name="answer")
+                        label#label-2-2.answer-label(for="answer-2-2")
+                            p.answer__text.answer__bordered В этом или следующем месяце
+                        input#answer-2-3.answer(type="radio" name="answer")
+                        label#label-2-3.answer-label(for="answer-2-3")
+                            p.answer__text.answer__bordered Еще не решил(а)
+                    #question_3.question
+                        p.question__title Укажите станции метро, которые ближе всего к Вам?
+                        input#answer-3-1.answer-text(type="text" name="answer" placeholder="Введите станцию метро")
+                    .question__button-box.d-flex.justify-content-center
+                        button#question-prev.button.question__button.d-none.col-6 Предыдущий вопрос
+                        button#question-next.button.question__button.col-6 Следующий вопрос
+                        button#question-submit.button.question__button.d-none.col-6 Отправить
+
         section#about
             .container
                 .wrapper
@@ -119,25 +159,34 @@ block main
                             .cat-inner-card
                                 h4.cat-inner-card__title Онлайн
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 26 000 руб
-                                    li.cat-inner-card__li 40 часов практики:
-                                        span.cat-inner-card__text_right 37 000 руб
-                                    li.cat-inner-card__li 56 часов практики:
-                                        span.cat-inner-card__text_right 47 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 3 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 26 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 40 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 37 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 56 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 47 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
                             .cat-inner-card
                                 h4.cat-inner-card__title В классе
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 29 000 руб
-                                    li.cat-inner-card__li 40 часов практики:
-                                        span.cat-inner-card__text_right 40 000 руб
-                                    li.cat-inner-card__li 56 часов практики:
-                                        span.cat-inner-card__text_right 50 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 4 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 29 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 40 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 40 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 56 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 50 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 4 месяца
+                            .flex-break
                             +cardModal("button_center button_orange")
                         li#cat-2.categories__li.wrapper
                             .cat-inner-card
@@ -159,25 +208,34 @@ block main
                             .cat-inner-card
                                 h4.cat-inner-card__title Онлайн
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 28 000 руб
-                                    li.cat-inner-card__li 40 часов практики:
-                                        span.cat-inner-card__text_right 39 000 руб
-                                    li.cat-inner-card__li 56 часов практики:
-                                        span.cat-inner-card__text_right 49 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 3 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 28 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 40 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 39 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 56 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 49 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
                             .cat-inner-card
                                 h4.cat-inner-card__title В классе
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 31 000 руб
-                                    li.cat-inner-card__li 40 часов практики:
-                                        span.cat-inner-card__text_right 42 000 руб
-                                    li.cat-inner-card__li 56 часов практики:
-                                        span.cat-inner-card__text_right 52 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 3 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 31 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 40 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 42 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 56 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 52 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
+                            .flex-break
                             +cardModal("button_center button_orange")
                         li#cat-3.categories__li.wrapper
                             .cat-inner-card
@@ -199,17 +257,22 @@ block main
                             .cat-inner-card
                                 h4.cat-inner-card__title Онлайн
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 20 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 1,5-2 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 20 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 1,5-2 месяца
                             .cat-inner-card
                                 h4.cat-inner-card__title В классе
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 25 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 1,5-2 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 25 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 1,5-2 месяца
+                            .flex-break
                             +cardModal("button_center button_orange")
                         li#cat-4.categories__li.wrapper
                             .cat-inner-card
@@ -231,14 +294,19 @@ block main
                             .cat-inner-card
                                 h4.cat-inner-card__title Онлайн
                                 ul.cat-inner-card__ul
-                                    li.cat-inner-card__li 20 часов практики:
-                                        span.cat-inner-card__text_right 26 000 руб
-                                    li.cat-inner-card__li 40 часов практики:
-                                        span.cat-inner-card__text_right 37 000 руб
-                                    li.cat-inner-card__li 56 часов практики:
-                                        span.cat-inner-card__text_right 47 000 руб
-                                    li.cat-inner-card__li Срок обучения:
-                                        span.cat-inner-card__text_right 3 месяца
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 20 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 26 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 40 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 37 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text 56 часов практики:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 47 000 руб
+                                    li.cat-inner-card__li
+                                        span.cat-inner-card__text Срок обучения:
+                                        span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
+                            .flex-break
                             +cardModal("button_center button_orange")
             section#instalment
                 .container
