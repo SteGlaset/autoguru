@@ -102,15 +102,6 @@
     background: linear-gradient(180deg, #7C82FF 0%, #131661 100%);
     border-radius: 10px;
   }
-  &_1 {
-
-  }
-  &_2 {
-
-  }
-  &_3 {
-
-  }
 }
 
 .question {
@@ -146,7 +137,7 @@
 
 #answer-3-1 {
   max-width: 440px;
- width: 100%;
+  width: 100%;
 }
 
 @media screen and (min-width: $sm) {
@@ -157,6 +148,14 @@
     }
     .answer-label {
       width: 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $lg) {
+  #question_1 {
+    .answer-label {
+      width: 25%;
     }
   }
 }

@@ -7,6 +7,8 @@
 
 .contacts__wrapper {
   padding: 40px 45px;
+  max-width: 432px;
+  margin-inline: auto;
 }
 
 .contact-block {
@@ -47,4 +49,21 @@
   width: 40px;
   height: auto;
   margin-inline: auto;
+}
+
+@media screen and (min-width: $md) {
+  .contacts__wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 690px;
+  }
+  .contact__box {
+    width: 49%;
+  }
+  .contacts__line {
+    width: 0;
+    height: 181px;
+    border-left: none;
+    margin: 0;
+  }
 }

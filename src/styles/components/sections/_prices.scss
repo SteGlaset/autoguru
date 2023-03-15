@@ -53,6 +53,7 @@
 }
 
 .prices__title {
+  width: 100%;
   font-family: 'IBM Plex Sans',sans-serif;
   font-weight: 500;
   font-size: 1.4rem;
@@ -135,6 +136,20 @@
 @media screen and (min-width: $lg) {
   .prices__list {
     max-width: 100%;
+  }
+
+  .prices__category {
+    font-size: 166px;
+    margin-left: -18px;
+  }
+
+  .prices__title {
+    font-size: 1.6rem;
+  }
+
+  .prices__item {
+    width: min(280px, 23%);
+    height: 114px;
   }
 
   .categories__li {

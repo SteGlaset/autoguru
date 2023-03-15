@@ -11,10 +11,6 @@
   margin-bottom: 20px;
 }
 
-.footer__ul {
-  text-align: center;
-}
-
 .footer__li {
   margin-bottom: 40px;
 }
@@ -39,4 +35,15 @@
   width: 34px;
   height: auto;
   margin-top: -10px;
+}
+
+@media screen and (min-width: $sm) {
+  .footer__ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer__li {
+    margin-bottom: 0;
+  }
 }

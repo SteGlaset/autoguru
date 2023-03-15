@@ -5,14 +5,36 @@
 }
 
 .about__description {
+  display: flex;
   margin-bottom: 30px;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.about-image {
+.about__image {
   display: block;
-  width: 75%;
+  width: min(75%, 300px);
   height: auto;
   margin-inline: auto;
   margin-bottom: 40px;
+}
+
+@media screen and (min-width: $lg) {
+  .about__content-box {
+    display: flex;
+    justify-content: space-between;
+  }
+  .about__description {
+    width: 55%;
+  }
+  .about__image {
+    width: 35%;
+    height: fit-content;
+    order: -1;
+  }
+  .about__button {
+    width: fit-content;
+    margin-top: auto;
+  }
 }
 
