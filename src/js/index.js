@@ -1,4 +1,4 @@
-import bootstrap from 'bootstrap';
+import 'bootstrap';
 
 //Questionary
 const questionPrev = document.getElementById('question-prev');
@@ -6,7 +6,7 @@ const questionNext = document.getElementById('question-next');
 const questions = document.querySelectorAll('.question');
 const indicators = document.querySelectorAll('.question__indicator');
 const count = document.querySelector('.question_count');
-const submit = document.getElementById('question-submit')
+const submit = document.querySelector('.question-submit-box')
 
 let questionCount = 1;
 const questionCountMax = 3;
@@ -85,3 +85,5 @@ catButtons.forEach(el => {
         catToActivate.classList.add('active');
     });
 })
+
+//Changing nav background

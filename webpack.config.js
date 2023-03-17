@@ -8,7 +8,19 @@ const PATHS = {
 
 module.exports = {
     entry: {
-        index: './src/index.pug'
+        index: './src/index.pug',
+        'branches/arbat': './src/branches/arbat.pug',
+        'branches/dostoevskaya': './src/branches/dostoevskaya.pug',
+        'branches/dostoevskaya2': './src/branches/dostoevskaya2.pug',
+        'branches/lubyanka': './src/branches/lubyanka.pug',
+        'branches/maryina-rosha': './src/branches/maryina-rosha.pug',
+        'branches/mayakovksaya': './src/branches/mayakovksaya.pug',
+        'branches/mendeleevskaya': './src/branches/mendeleevskaya.pug',
+        'branches/noviy-arbat': './src/branches/noviy-arbat.pug',
+        'branches/pushkinskaya': './src/branches/pushkinskaya.pug',
+        'branches/rijskaya': './src/branches/rijskaya.pug',
+        'branches/teatralnaya': './src/branches/teatralnaya.pug',
+        'branches/voikovskaya': './src/branches/voikovskaya.pug',
     },
     output: {
         path: path.resolve(__dirname, 'dist', ),

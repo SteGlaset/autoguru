@@ -2,6 +2,27 @@ mixin cardModal(classes, value)
     script(type='text/javascript' src='https://formdesigner.ru/js/widgets/popup.js?v=0.0.3')
     a.button(class=classes target='_blank' onclick="FDPopup.open(186158,{'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;" href='https://formdesigner.ru/form/view/186158')= value ? value : "Оставить заявку"
 
+mixin enrollForm(index, classes)
+    div(id=`form_${index}`)
+    script(type='text/javascript').
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push({
+                formId: 186158,
+                host: "formdesigner.ru",
+                formHeight: 100,
+                el: `form_#{index}`,
+                center: 1,
+                scroll: 0
+            });
+            var s = d.createElement("script"), g = "getElementsByTagName";
+            s.type = "text/javascript";
+            s.charset = "UTF-8";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//formdesigner.ru/js/iform.js?v=0.0.3";
+            var h = d[g]("head")[0] || d[g]("body")[0];
+            h.appendChild(s);
+        })(document, window, "fdforms");
+
 
 mixin carousel(type)
     .carousel.slide(id=`carousel-${type}` data-bs-ride='carousel')
