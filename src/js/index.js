@@ -43,7 +43,9 @@ function toggleIndicators() {
     });
 }
 
-questionPrev.addEventListener('click', function() {
+
+
+questionPrev.addEventListener('click', () => {
     questionCount--;
     removeButtons();
     removeQuestions();
@@ -53,7 +55,7 @@ questionPrev.addEventListener('click', function() {
     questionToActivate.classList.add('question_active');
 });
 
-questionNext.addEventListener('click', function() {
+questionNext.addEventListener('click', () => {
     questionCount++;
     removeButtons();
     removeQuestions();
@@ -87,3 +89,20 @@ catButtons.forEach(el => {
 })
 
 //Changing nav background
+const header = document.getElementById('header');
+function scrollHeader() {
+    if (window.scrollY < 5) {
+        header.classList.remove('header_background');
+    } else {
+        header.classList.add('header_background');
+    }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    scrollHeader();
+});
+
+window.addEventListener('scroll', () => {
+    scrollHeader();
+    header.classList.add('header_scrolling');
+})

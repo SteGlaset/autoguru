@@ -6,6 +6,7 @@
 
 html {
   font-size: clamp(10px, calc(5px + 5 * (100vw / 1199)), 14px);
+  scroll-padding-top: calc($header-height + 40px);
 }
 
 body {
@@ -81,7 +82,7 @@ button {
   background: linear-gradient(180deg, #7C82FF 0%, #131661 100%);
   padding: 10px;
   border-radius: 10px;
-  transition: all .2s;
+  transition: .2s;
   justify-self: center;
   &_center {
     display: block;
@@ -93,6 +94,35 @@ button {
   }
   &:hover {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  }
+}
+
+.modal__button {
+  position: relative;
+  overflow: hidden;
+  &:not(:hover)::after {
+    background: #fff;
+    content: "";
+    display: block;
+    height: 155px;
+    left: -75px;
+    opacity: 0.4;
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+    width: 50px;
+    z-index: 10;
+    animation: blink 3s infinite;
+  }
+}
+
+@keyframes blink {
+  80% {
+    left: -75px;
+  }
+  100% {
+    left: 120%;
   }
 }
 

@@ -1,6 +1,6 @@
 mixin cardModal(classes, value)
     script(type='text/javascript' src='https://formdesigner.ru/js/widgets/popup.js?v=0.0.3')
-    a.button(class=classes target='_blank' onclick="FDPopup.open(186158,{'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;" href='https://formdesigner.ru/form/view/186158')= value ? value : "Оставить заявку"
+    a.button.modal__button(class=classes target='_blank' onclick="FDPopup.open(186158,{'hideCloseBtn':false,'host':'formdesigner.ru','overlay':{'background':'#000000','opacity':0.1}}); return false;" href='https://formdesigner.ru/form/view/186158')= value ? value : "Оставить заявку"
 
 mixin enrollForm(index, classes)
     div(id=`form_${index}`)

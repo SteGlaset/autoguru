@@ -2,7 +2,6 @@
 
 #header {
   height: $header-height;
-  //background: rgb(247, 247, 247);
 }
 
 .navbar-toggler {
@@ -32,4 +31,13 @@
 
 .nav-link {
   color: $indigo;
+}
+
+.header_background {
+  background: rgb(247, 247, 247);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .25);
+}
+
+.header_scrolling {
+  transition: box-shadow .2s;
 }

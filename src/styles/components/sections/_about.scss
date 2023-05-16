@@ -15,22 +15,23 @@
   display: block;
   width: min(75%, 300px);
   height: auto;
-  margin-inline: auto;
   margin-bottom: 40px;
+  margin-inline: auto;
 }
 
 @media screen and (min-width: $lg) {
   .about__content-box {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .about__description {
-    width: 55%;
+    max-width: 55%;
   }
   .about__image {
     width: 35%;
-    height: fit-content;
+    height: auto;
     order: -1;
+    margin-inline: 0 40px;
   }
   .about__button {
     width: fit-content;
