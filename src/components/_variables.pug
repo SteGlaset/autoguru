@@ -2,8 +2,9 @@
 - year = new Date().getFullYear()
 
 //-Основная информация
-- title = `Автошкола "АвтоГуру" ${year} год`
 - phone = { formatted: "+7 (495) 128-86-72", notFormatted: "+74951288672" }
+- title = `Онлайн-автошкола АвтоГуру в Москве | Обучение на права категории B и A, удобный график, рассрочка `
+- description = `✅ Поможем открыть категорию А и Б в Москве ✔️ Классы и автодромы рядом с вами ✔️ Офлайн и онлайн  обучение в автошколе ✔️ Станьте водителем за 3 месяца ✔️ Доступная стоимость, рассрочка без % ✔️ ☎️ ${phone.formatted}`
 - mail = "avtoshkolaguru@yandex.ru"
 - workTime = "с 10:00 до 20:00 без выходных"
 - vk = "https://vk.com/avtogyrygyry"
@@ -121,6 +122,13 @@
             title: "Автошкола м. Лубянка",
             mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.0323118794636!2d37.62230431555047!3d55.7579408990636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5bec9b2c31%3A0x5963874097a4958b!2z0J3QuNC60L7Qu9GM0YHQutCw0Y8g0YPQuy4sIDEwLCDQnNC-0YHQutCy0LAsINCc0L7RgdC60L7QstGB0LrQsNGPINC-0LHQuy4sIDEwOTAxMg!5e0!3m2!1sru!2sru!4v1679050463183!5m2!1sru!2sru"
         },
+        {
+            name: "Юго-Западная",
+            href: "yugo-zapadnaya.html",
+            address: "улица Покрышкина, 8к3",
+            title: "Автошкола м. Юго-Западная",
+            mapSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.3633198670595!2d37.469494076713744!3d55.665281998729036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54da213fe1431%3A0x4c2574b566c62d2c!2z0YPQuy4g0J_QvtC60YDRi9GI0LrQuNC90LAsIDgg0LrQvtGA0L_Rg9GBIDMsINCc0L7RgdC60LLQsCwgMTE5NjAy!5e0!3m2!1sru!2sru!4v1686133012993!5m2!1sru!2sru"
+        }
 
     ].sort((a, b) => a.name.localeCompare(b.name))
 
@@ -217,3 +225,26 @@
                 }
             ]
 
+-
+    overrun = [
+        {
+            title: 'Минимальный курс',
+            features: ['5 занятий с инструктором', 'Онлайн поддержка'],
+            price: '11 000 ₽'
+        },
+        {
+            title: 'Оптимальный курс',
+            features: ['10 занятий с инструктором', 'Доступ к онлайн платформе ПДД', 'Онлайн поддержка'],
+            price: '20 000 ₽'
+        },
+        {
+            title: 'Расширенный курс',
+            features: [
+                '10 занятий с инструктором',
+                'Доступ к онлайн платформе ПДД',
+                'Онлайн поддержка',
+                'Сессия с психологом (как побороть страх вождения и приобрести уверенность за рулем)'
+            ],
+            price: '25 000 ₽'
+        }
+    ]
