@@ -1,0 +1,21 @@
+include _mixins
+include _variables
+
+block variables
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        title= title
+        meta(name="description" content=description)
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(href=require('../assets/icons/favicon.svg') rel='shortcut icon' type='image/x-icon')
+        link(href=require("../styles/normalize.css"), rel="stylesheet")
+        link(href=require("../styles/style.scss"), rel="stylesheet")
+        block head
+    body
+        block body_start
+        include _header
+        block main
+        include _footer

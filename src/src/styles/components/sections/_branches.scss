@@ -1,0 +1,48 @@
+@import '../variables';
+
+#branches {
+  margin-top: 60px;
+}
+
+.branches__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(max-content, auto);
+  gap: 20px;
+  justify-content: space-between;
+  margin-block: 30px 40px;
+}
+
+.branches__link {
+  font-size: 2rem;
+  svg {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    g path {
+      transition: fill .2s;
+    }
+  }
+  &:hover svg g path {
+    fill: #d54e0a;
+  }
+}
+
+
+@media screen and (min-width: $sm) {
+  .branches__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .branches__list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: $lg) {
+  .branches__list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

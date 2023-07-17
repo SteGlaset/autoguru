@@ -1,0 +1,23 @@
+@import 'variables';
+@import 'sections/_about';
+@import 'sections/_autoguru';
+@import 'sections/_autopark';
+@import 'sections/_branches';
+@import 'sections/_contacts';
+@import 'sections/_instalment';
+@import 'sections/_instructors';
+@import 'sections/_license';
+@import 'sections/_prices';
+@import 'sections/_questionary';
+@import 'sections/_reviews';
+@import 'sections/_studying';
+
+#main {
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.2) 0%, rgba(186, 222, 255, 0.37) 19.79%, rgba(102, 168, 230, 0.43) 59.9%, rgba(30, 115, 192, 0.6) 100%);
+}
+
+.studying-n-prices {
+  background: url("../../assets/images/background/about-trail-bg.webp") no-repeat 0 100px;
+  background-size: 100% auto;
+}
+

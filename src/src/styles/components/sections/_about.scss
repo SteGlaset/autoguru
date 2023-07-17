@@ -1,0 +1,41 @@
+@import '../variables';
+
+#about {
+  margin-bottom: 60px;
+}
+
+.about__description {
+  display: flex;
+  margin-bottom: 30px;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about__image {
+  display: block;
+  width: min(75%, 300px);
+  height: auto;
+  margin-bottom: 40px;
+  margin-inline: auto;
+}
+
+@media screen and (min-width: $lg) {
+  .about__content-box {
+    display: flex;
+    justify-content: center;
+  }
+  .about__description {
+    max-width: 55%;
+  }
+  .about__image {
+    width: 35%;
+    height: auto;
+    order: -1;
+    margin-inline: 0 40px;
+  }
+  .about__button {
+    width: fit-content;
+    margin-top: auto;
+  }
+}
+

@@ -1,0 +1,71 @@
+@import '../variables';
+
+.title-box {
+  height: 90px;
+  background: linear-gradient(180deg, #7C82FF 0%, #131661 100%);
+  border-radius: 20px;
+  padding-inline: 24px;
+  overflow: visible;
+  margin-bottom: 30px;
+}
+
+.title-box__image {
+  width: 100px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.title-box__text_smaller {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  color: #FFF;
+}
+
+.title-box__title {
+  color: #FFF;
+}
+
+.studying__ul {
+  margin-bottom: 35px;
+}
+
+.studying__li {
+  position: relative;
+  padding-block: 20px;
+  &:not(:last-child)::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000357;
+  }
+}
+
+.studying__icon-box {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.studying__icon {
+  transform: scale(0.33);
+}
+
+.studying__description {
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+@media screen and (min-width: $lg) {
+  .studying__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .theory,
+  .practics {
+    width: 49%;
+  }
+}

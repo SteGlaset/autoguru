@@ -1,0 +1,24 @@
+@import '../variables';
+
+.instalment-image {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin-inline: auto;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: $md) {
+  .instalment__container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  .instalment__title {
+    text-align: left;
+  }
+  .instalment-image {
+    margin-right: 20px;
+    height: 140px;
+    width: auto;
+  }
+}
