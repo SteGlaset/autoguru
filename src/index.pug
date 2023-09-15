@@ -16,6 +16,7 @@ block head
     // End Google Tag Manager
     script.
       (function(a,m,o,c,r,m){a[m]={id:"246051",hash:"c8bbf7d4708dcaa94a56b8e489321f608608df67f35961a06f2bf9db17018cbb",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1690370652';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
+    script(src='https://cdn.proffskills.ru/static/js/autoschool/autoschoolInfoUpdating.js' defer)
 
 block main
     block body_start
@@ -37,9 +38,14 @@ block main
                 img(src='https://mc.yandex.ru/watch/91603433' style='position:absolute; left:-9999px;' alt='')
         // /Yandex.Metrika counter
         // Google Tag Manager (noscript)
-          noscript
-        iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NR8C87Z' height='0' width='0' style='display:none;visibility:hidden')
+        noscript
+            iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-NR8C87Z' height='0' width='0' style='display:none;visibility:hidden')
         // End Google Tag Manager (noscript)
+        noscript
+            div(style='color: red; position: fixed; bottom: 5px; left: 5px; z-index: 999')
+            | JavaScript отключен, информация на
+            | сайте может быть неполной
+
 
     main#main
         section#autoguru
@@ -175,9 +181,9 @@ block main
                         button.prices__item.d-flex.align-items-center(data-for="#cat-3")
                             p.prices__category A
                             h5.prices__title Категория А
-                        button.prices__item.d-flex.align-items-center(data-for="#cat-4")
-                            p.prices__category O
-                            h5.prices__title Онлайн обучение
+                        //button.prices__item.d-flex.align-items-center(data-for="#cat-4")
+                        //    p.prices__category O
+                        //    h5.prices__title Онлайн обучение
                         button.prices__item.overrun__item.d-flex.align-items-center(data-for="#cat-5")
                             p.prices__category.overrun__category +
                             h5.prices__title Дополнительный накат
@@ -202,13 +208,19 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 27 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='48' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 40 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 37 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='49' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 56 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 47 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='50' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
@@ -217,13 +229,19 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 31 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='51' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 40 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 42 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='52' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 56 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 52 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='53' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 4 месяца
@@ -249,13 +267,19 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 28 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='54' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 40 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 39 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='55' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 56 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 49 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='56' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
@@ -264,13 +288,19 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 33 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='57' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 40 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 44 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='58' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 56 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 54 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='59' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
@@ -296,7 +326,9 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 20 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='60' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 1,5-2 месяца
@@ -305,44 +337,46 @@ block main
                                 ul.cat-inner-card__ul
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 25 000 руб
+                                        span.cat-inner-card__text.cat-inner-card__text_right
+                                            span.auto-param(data-type='price' data-key='61' data-format) ...
+                                            span &nbsp;руб
                                     li.cat-inner-card__li
                                         span.cat-inner-card__text Срок обучения:
                                         span.cat-inner-card__text.cat-inner-card__text_right 1,5-2 месяца
                             .flex-break
                             +cardModal("button_center button_orange")
-                        li#cat-4.categories__li.wrapper
-                            .cat-inner-card
-                                h4.cat-inner-card__title Программа курса
-                                ul.cat-inner-card__ul
-                                    li.cat-inner-card__li Теоретическую часть - 144 часа
-                                    li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
-                                    li.cat-inner-card__li Сопровождение в ГИБДД
-                                    li.cat-inner-card__li Персонального менеджера
-                                    li.cat-inner-card__li Прямую связь с руководством автошколы
-                            .cat-inner-card
-                                h4.cat-inner-card__title График занятий
-                                    span.cat-inner-card__subtitle (выберите удобный для себя)
-                                ul.cat-inner-card__ul
-                                    li.cat-inner-card__li Будние дни с 8.00 до 22.30
-                                    li.cat-inner-card__li Выходные дни с 9.00 до 22.00
-                            .cat-inner-card
-                                h4.cat-inner-card__title Онлайн
-                                ul.cat-inner-card__ul
-                                    li.cat-inner-card__li
-                                        span.cat-inner-card__text 20 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 27 000 руб
-                                    li.cat-inner-card__li
-                                        span.cat-inner-card__text 40 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 37 000 руб
-                                    li.cat-inner-card__li
-                                        span.cat-inner-card__text 56 часов практики:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 47 000 руб
-                                    li.cat-inner-card__li
-                                        span.cat-inner-card__text Срок обучения:
-                                        span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
-                                .flex-break
-                                +cardModal("button_center button_orange")
+                        //li#cat-4.categories__li.wrapper
+                        //    .cat-inner-card
+                        //        h4.cat-inner-card__title Программа курса
+                        //        ul.cat-inner-card__ul
+                        //            li.cat-inner-card__li Теоретическую часть - 144 часа
+                        //            li.cat-inner-card__li Практическую часть - 20, 40 или 56 часов
+                        //            li.cat-inner-card__li Сопровождение в ГИБДД
+                        //            li.cat-inner-card__li Персонального менеджера
+                        //            li.cat-inner-card__li Прямую связь с руководством автошколы
+                        //    .cat-inner-card
+                        //        h4.cat-inner-card__title График занятий
+                        //            span.cat-inner-card__subtitle (выберите удобный для себя)
+                        //        ul.cat-inner-card__ul
+                        //            li.cat-inner-card__li Будние дни с 8.00 до 22.30
+                        //            li.cat-inner-card__li Выходные дни с 9.00 до 22.00
+                            //.cat-inner-card
+                            //    h4.cat-inner-card__title Онлайн
+                            //    ul.cat-inner-card__ul
+                            //        li.cat-inner-card__li
+                            //            span.cat-inner-card__text 20 часов практики:
+                            //            span.cat-inner-card__text.cat-inner-card__text_right 27 000 руб
+                            //        li.cat-inner-card__li
+                            //            span.cat-inner-card__text 40 часов практики:
+                            //            span.cat-inner-card__text.cat-inner-card__text_right 37 000 руб
+                            //        li.cat-inner-card__li
+                            //            span.cat-inner-card__text 56 часов практики:
+                            //            span.cat-inner-card__text.cat-inner-card__text_right 47 000 руб
+                            //        li.cat-inner-card__li
+                            //            span.cat-inner-card__text Срок обучения:
+                            //            span.cat-inner-card__text.cat-inner-card__text_right 3 месяца
+                            //    .flex-break
+                            //    +cardModal("button_center button_orange")
                         li#cat-5.categories__li.wrapper
                             for course in overrun
                                 .cat-inner-card
@@ -352,7 +386,9 @@ block main
                                             li.cat-inner-card__li= feature
                                         li.cat-inner-card__li
                                             span.cat-inner-card__text Стоимость:
-                                            h4.cat-inner-card__text.cat-inner-card__text_right= course.price
+                                            h4.cat-inner-card__text.cat-inner-card__text_right
+                                                span.auto-param(data-type='overrun' data-key=course.pack data-format) ...
+                                                span &nbsp;руб
                             .flex-break
                             +cardModal("button_center button_orange")
 
