@@ -1,4 +1,7 @@
-import 'bootstrap';
+import { Modal } from 'bootstrap';
+
+// Import performance monitoring
+import './performance.js';
 
 //Questionary
 const questionPrev = document.getElementById('question-prev');
@@ -88,21 +91,85 @@ catButtons.forEach(el => {
     });
 })
 
-//Changing nav background
-const header = document.getElementById('header');
-function scrollHeader() {
-    if (window.scrollY < 5) {
-        header.classList.remove('header_background');
-    } else {
-        header.classList.add('header_background');
-    }
-}
+// Lazy load non-critical functionality
+const loadQuestionary = async () => {
+    const { default: questionaryModule } = await import('./modules/questionary.js');
+    questionaryModule.init();
+};
 
-document.addEventListener("DOMContentLoaded", () => {
-    scrollHeader();
+const loadCategories = async () => {
+    const { default: categoriesModule } = await import('./modules/categories.js');
+    categoriesModule.init();
+};
+
+// Critical functionality - load immediately
+const initHeaderScroll = () => {
+    const header = document.getElementById('header');
+    if (!header) return;
+
+    function scrollHeader() {
+        if (window.scrollY < 5) {
+            header.classList.remove('header_background');
+        } else {
+            header.classList.add('header_background');
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        scrollHeader();
+    });
+
+    window.addEventListener('scroll', () => {
+        scrollHeader();
+        header.classList.add('header_scrolling');
+    });
+};
+
+// Initialize critical functionality
+initHeaderScroll();
+
+// Lazy load non-critical modules when needed
+document.addEventListener('DOMContentLoaded', () => {
+    // Load questionary module if the element exists
+    if (document.getElementById('question-prev')) {
+        loadQuestionary();
+    }
+    
+    // Load categories module if the element exists
+    if (document.querySelector('.prices__item')) {
+        loadCategories();
+    }
 });
 
-window.addEventListener('scroll', () => {
-    scrollHeader();
-    header.classList.add('header_scrolling');
-})
+// Preload critical images
+const preloadCriticalImages = () => {
+    const criticalImages = [
+        'assets/images/logo.webp',
+        'assets/images/about-car.webp'
+    ];
+    
+    criticalImages.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+};
+
+// Preload critical images when DOM is ready
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', preloadCriticalImages);
+} else {
+    preloadCriticalImages();
+}
+
+// Register Service Worker for caching and offline functionality
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+                console.log('SW registered: ', registration);
+            })
+            .catch(registrationError => {
+                console.log('SW registration failed: ', registrationError);
+            });
+    });
+}

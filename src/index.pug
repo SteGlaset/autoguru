@@ -4,18 +4,39 @@ block variables
     - navLinks[0].active = true
 
 block head
+    // Critical CSS inline for above-the-fold content
+    style.
+        /* Critical CSS will be inlined here */
+    
+    // Preload critical resources
+    link(rel="preload" href=require("assets/images/logo.webp") as="image")
+    link(rel="preload" href=require("assets/images/about-car.webp") as="image")
+    
+    // Defer non-critical CSS
+    link(href=require("styles/components/main.scss"), rel="stylesheet" media="print" onload="this.media='all'")
+    noscript
+        link(href=require("styles/components/main.scss"), rel="stylesheet")
+    
+    // Defer JavaScript
     script(src=require("/src/js/index.js"), defer)
-    link(href=require("styles/components/main.scss"), rel="stylesheet")
-    // Google Tag Manager
+    
+    // Defer analytics scripts
     script.
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NR8C87Z');
-    // End Google Tag Manager
+        // Google Tag Manager - deferred
+        window.addEventListener('load', function() {
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NR8C87Z');
+        });
+    
     script.
-      (function(a,m,o,c,r,m){a[m]={id:"246051",hash:"c8bbf7d4708dcaa94a56b8e489321f608608df67f35961a06f2bf9db17018cbb",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1690370652';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
+        // AmoCRM script - deferred
+        window.addEventListener('load', function() {
+            (function(a,m,o,c,r,m){a[m]={id:"246051",hash:"c8bbf7d4708dcaa94a56b8e489321f608608df67f35961a06f2bf9db17018cbb",locale:"ru",inline:false,setMeta:function(p){this.params=(this.params||[]).concat([p])}};a[o]=a[o]||function(){(a[o].q=a[o].q||[]).push(arguments)};var d=a.document,s=d.createElement('script');s.async=true;s.id=m+'_script';s.src='https://gso.amocrm.ru/js/button.js?1690370652';d.head&&d.head.appendChild(s)}(window,0,'amoSocialButton',0,0,'amo_social_button'));
+        });
+    
     script(src='https://cdn.proffskills.ru/static/js/autoschool/autoschoolInfoUpdating.js' defer)
 
 block main

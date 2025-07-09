@@ -1,0 +1,139 @@
+// Critical CSS for above-the-fold content
+@import 'variables';
+
+// Critical layout styles
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  contain: layout style paint;
+}
+
+// Critical header styles
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.header_background {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+// Critical hero section styles
+#autoguru {
+  padding: 120px 0 60px;
+  text-align: center;
+}
+
+.autoguru__container {
+  contain: layout style paint;
+}
+
+.h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+// Critical button styles
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button_center {
+  text-align: center;
+  margin: 20px 0;
+}
+
+// Critical image optimization
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// Critical text styles
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+// Critical utility classes
+.d-none {
+  display: none !important;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.col-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+// Critical background
+#main {
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0.2) 0%, rgba(186, 222, 255, 0.37) 19.79%, rgba(102, 168, 230, 0.43) 59.9%, rgba(30, 115, 192, 0.6) 100%);
+}
+
+// Reduce motion for accessibility
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
